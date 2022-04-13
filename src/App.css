@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Montserrat+Subrayada:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@200&family=BIZ+UDMincho&family=Montserrat+Subrayada:wght@700&display=swap');
 body {
-  background-color: #1e212d;
-  color: #eabf9f;
+  background-color: #b2b3b8;
+  color: #cedb12;
   height: 100vh;
-  font-family: 'Montserrat Subrayada', sans-serif;}
+  font-family: 'Anek Devanagari', sans-serif;}
 
 #root {
   height: 100%;
@@ -18,7 +17,7 @@ body {
 }
 
 .pomodoro {
-  font-size: 6em;
+  font-size: 10em;
 }
 
 .message {
@@ -29,11 +28,11 @@ body {
 
 
 .buttons button {
-  padding: 0.8rem 2rem;
+  padding: 1rem 1rem 1rem 1rem;
   border: none;
-  margin-left: 0.5rem;
+  margin-left: 2rem;
   margin-right: 3rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
@@ -44,7 +43,7 @@ body {
 }
 
 .buttons button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 

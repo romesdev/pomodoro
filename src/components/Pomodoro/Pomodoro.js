@@ -1,17 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect} from 'react';
 
 export default function Pomodoro() {
 	const [minutes, setMinutes] = useState(25)
 	const [seconds, setSeconds] = useState(0)
 	const [isActive, setIsActive] = useState(false)
 	const [isReset, setIsReset] = useState(false)
-	const focus = useState(minutes - 1)
-	const relax = useState(minutes - 1)
 	const [displayMessage, setDisplayMessage] = useState(false)
 
 	useEffect(() => {
-		let interval
-
 		if (isReset) {
 			setIsActive(false)
 			setSeconds(0)
@@ -27,8 +23,8 @@ export default function Pomodoro() {
 					if (minutes !== 0) {
 						setSeconds(59)
 						setMinutes(minutes - 1)
-					} else {
-						let minutes = displayMessage ? focus : relax
+					} else {						
+						let minutes = displayMessage ? 24 : 4
 						let seconds = 59
 
 						setSeconds(seconds)
@@ -48,9 +44,8 @@ export default function Pomodoro() {
 	return (
 		<div className="pomodoro">
 			<div className="message">
-				{displayMessage && <div>Break time! New session starts in:</div>}
+				{displayMessage && <div className="message">Break time!<br></br> New session starts in:</div>}
 				{!displayMessage && <div>Focus time</div>}
-
 			</div>
 
 			<div className="timer">
@@ -60,7 +55,7 @@ export default function Pomodoro() {
 			<div className="buttons">
 				<button onClick={ () => {
 						setIsActive(!isActive);
-						if (isReset == true) setIsReset(false)
+						if (isReset === true) setIsReset(false)
 						} } className="start">
 					{isActive ? "Pause" : "Start"}
 				</button>
